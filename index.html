@@ -102,7 +102,7 @@ a.sourceLine {
 <section class="page-header">
 <h1 class="title toc-ignore project-name">QIIME2 Workshop</h1>
 <h4 class="author project-author">Jordan Bisanz</h4>
-<h4 class="date project-date">2020-04-14 12:14</h4>
+<h4 class="date project-date">2020-04-14 12:21</h4>
 </section>
 
 
@@ -128,29 +128,29 @@ a.sourceLine {
 <p>Next we want to activate our new environment as below:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">conda</span> activate qiime2-2020.2</code></pre></div>
 <p>Now we can create a new folder which will contain all the files for the tutorial and the results we calculate:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> tutorial16S
-<span class="bu">cd</span> tutorial16S</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> tutorial16S <span class="co"># make a new folder </span>
+<span class="bu">cd</span> tutorial16S <span class="co"># change directory into the new folder</span></code></pre></div>
 <p>And finally we will download our raw data:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> GET THE DOWNLOAD LINK AND PUT IT HERE
-<span class="fu">tar</span> -xvf tutorialdata.tar.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://github.com/jbisanz/MicrobiomeWorkshop2020/raw/master/tutorialdata.tar.gz
+<span class="fu">tar</span> -xvf tutorialdata.tar.gz <span class="co"># decompress the data which should form a new folder called data</span></code></pre></div>
 </div>
 <div id="installation-option-2-running-on-interactive-node-of-wynton-cluster" class="section level2">
 <h2>Installation Option 2: Running on Interactive Node of Wynton Cluster</h2>
 <p><em>Note: to use this option, you need to have signed up for an <a href="https://wynton.ucsf.edu/hpc/about/join.html">account</a> in advance.</em></p>
-<p>Start by logging into a wynton login in node as below:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ssh</span> yourusername@log1.wynton.ucsf.edu</code></pre></div>
-<p>Since we can’t run code directly on a login node, we subsequently login to one of the development nodes (dev1, dev2, or dev3) as below:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ssh</span> dev3</code></pre></div>
+<p>Start by logging into a wynton login node as below:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ssh</span> yourusername@log1.wynton.ucsf.edu <span class="co">#use ssh to login to wynton</span></code></pre></div>
+<p>Since we can’t run code directly on a login node, we subsequently connect to one of the development nodes (dev1, dev2, or dev3) as below:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">ssh</span> dev3 <span class="co">#use ssh again to login to a development node</span></code></pre></div>
 <p>You should currently be in your own home directory which you can check using the <code>pwd</code> command. In my case it is <code>/wynton/home/turnbaugh/jbisanz</code>. Remember this location for later as we will need it to download our results back from the cluster.</p>
 <p>Rather than have everyone install their own Conda environment, you can instead access the conda install and qiime2 environment which I maintain as below:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">source</span> /turnbaugh/qb3share/shared_resources/Conda/etc/profile.d/conda.sh <span class="co">#loading conda into your terminal session</span>
-<span class="ex">conda</span> activate qiime2-2020.2</code></pre></div>
+<span class="ex">conda</span> activate qiime2-2020.2 <span class="co">#activating a conda environment I have already made</span></code></pre></div>
 <p>Now we can create a new folder which will contain all the files for the tutorial and the results we calculate:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> tutorial16S
-<span class="bu">cd</span> tutorial16S</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> tutorial16S <span class="co"># make a new folder </span>
+<span class="bu">cd</span> tutorial16S <span class="co"># change directory into the new folder</span></code></pre></div>
 <p>And finally we can copy the tutorial data to our directory:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">cp</span> /wynton/home/turnbaugh/jbisanz/tutorialdata.tar.gz .
-<span class="fu">tar</span> -xzvf tutorialdata.tar.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">cp</span> /wynton/home/turnbaugh/jbisanz/tutorialdata.tar.gz . <span class="co">#copy the tutorial data from my folder to yours</span>
+<span class="fu">tar</span> -xzvf tutorialdata.tar.gz <span class="co"># decompress the raw data into a new folder called data/</span></code></pre></div>
 <hr />
 </div>
 </div>
